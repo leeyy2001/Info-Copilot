@@ -7,8 +7,8 @@ Repository for code and text generation using open source Large Language Models
 
 ## Troubleshooting guide
 1. Taking too long to run the models. \
-'''
+```
 model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True).to(device)
 
 inputs = tokenizer.encode("def print_hello_world():", return_tensors="pt").to(device)
-'''
+```
