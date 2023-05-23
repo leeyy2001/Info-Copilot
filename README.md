@@ -6,9 +6,11 @@ Repository for code and text generation using open source Large Language Models
 2. Code to install the models canbe found in the model-downloader notebook
 
 ## Troubleshooting guide
-1. Taking too long to run the models. \
+1. Taking too long to run the models. 
 ```
 model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True).to(device)
 
 inputs = tokenizer.encode("def print_hello_world():", return_tensors="pt").to(device)
 ```
+
+Using the to() method to use the GPU available. Both inputs and model have to use the .to() function.
